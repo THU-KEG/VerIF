@@ -1,0 +1,1 @@
+python3 auto_sglang_eval.py --config_path ../configs/if.json

@@ -1,0 +1,8 @@
+{
+    "/mnt/ph/ScaleIF/verl/examples/grpo_trainer/checkpoints/verl_grpo_if/tulu3_8b_if_3_12": {
+        "config": "qw7b",
+        "wandb_project": "verl_grpo_if",
+        "project": "verl_grpo_if",
+        "simple_evals_dir": "/mnt/ph/glm-simple-evals"
+    }
+}

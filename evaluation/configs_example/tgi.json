@@ -1,0 +1,6 @@
+{
+    "/path/to/checkpoint": {
+        "config": "qw7b",
+        "project": "nemo_aligner_ppo"
+    }
+}

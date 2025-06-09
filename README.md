@@ -8,16 +8,18 @@
 **VerIF** is a practical and efficient method for **verification in instruction-following reinforcement learning**. Built on the idea of *Reinforcement Learning with Verifiable Rewards (RLVR)*, VerIF integrates **rule-based code checks** with **LLM-based reasoning verification** (e.g., QwQ-32B) to provide accurate and scalable reward signals.
 
 To support this method, we construct a high-quality dataset, **VerInstruct**, with ~22,000 instruction-following instances paired with verification signals. Models trained with VerIF not only achieve **state-of-the-art performance** on several benchmarks across models at similar scale but also maintain their general capabilities.
----
 
-## 🔥 Results
+### 🔥 Results
 
-![Result Chart](./assets/results.png)  
+<img src="./assets/results.png" alt="Result Chart" width="100%"/>
+
 *RL with VerIF significantly improves instruction-following performance across benchmarks.*
 
----
-## Method
-![Method Figure](./assets/method.png)
+### Method
+<p align="center">
+<img src="./assets/method.png" alt="Method Figure" width="80%"/>
+</p>
+
 *VerIF integrates **rule-based code checks** with **LLM-based reasoning verification** (e.g., QwQ-32B) to provide accurate and scalable reward signals.*
 
 ---
@@ -25,7 +27,7 @@ To support this method, we construct a high-quality dataset, **VerInstruct**, wi
 
 ## Data & Trained Models
 
-- [VerInstrcut (22k instruction-following examples with verifiable signals)](./data/)
+- [VerInstruct (22k instruction-following examples with verifiable signals)](./data/)
 - [R1-Distill-Qwen-7B-VerIF](./models/qwen2-7b-verif/), based on DeepSeek-R1-R1-Distill-Qwen-7B
 - [TULU3-VerIF](./models/tulu3-8b-verif/), based on Llama-3.1-Tulu-3-8B-SFT
 
@@ -49,7 +51,7 @@ Please refer to the original [verl documentation](https://github.com/volcengine/
 
 ### Step 1: Preprocess Data  
 Download data from [here](). Use `./examples/data_preprocess/if_prompts.py` to preprocess VerInstruct.  
-> Make sure to adjust paths and add the import path for `./verl/utils/reward_score/local_server` at the top of each function.
+> Make sure to add the import path for `./verl/utils/reward_score/local_server` at the top of each function.
 
 ### Step 2: Setup the Verifier Model  
 For **soft constraint verification**, use an LLM-based verifier. You may:
@@ -67,13 +69,13 @@ Use the provided training scripts:
 
 These use DeepSeek-RL-Distilled-Qwen-7B and TULU 3 SFT as base models.  
 Update paths to point to your model checkpoint if needed.
+
 ---
 
 ## Acknowledgments
 
-We thank the [**verl**](https://github.com/volcengine/verl) team for their open-source framework, and the [**Crab**](https://github.com/THU-KEG/Crab) team for their original data.
+We thank the [**verl**](https://github.com/volcengine/verl) team for their open-source framework, and the [**Crab**](https://github.com/THU-KEG/Crab) team for their open-sourced original data.
 
----
 
 ## Citations
 If this repo helps, please kindly cite us:

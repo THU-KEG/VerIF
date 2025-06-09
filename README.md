@@ -27,9 +27,9 @@ To support this method, we construct a high-quality dataset, **VerInstruct**, wi
 
 ## Data & Trained Models
 
-- [VerInstruct (22k instruction-following examples with verifiable signals)](./data/)
-- [R1-Distill-Qwen-7B-VerIF](./models/qwen2-7b-verif/), based on DeepSeek-R1-R1-Distill-Qwen-7B
-- [TULU3-VerIF](./models/tulu3-8b-verif/), based on Llama-3.1-Tulu-3-8B-SFT
+- [VerInstruct (22k instruction-following examples with verifiable signals)](data)
+- [R1-Distill-Qwen-7B-VerIF](model), based on DeepSeek-R1-R1-Distill-Qwen-7B
+- [TULU3-VerIF](model), based on Llama-3.1-Tulu-3-8B-SFT
 
 ---
 
@@ -50,12 +50,12 @@ This repo is forked from [verl](https://github.com/volcengine/verl). We sincerel
 Please refer to the original [verl documentation](https://github.com/volcengine/verl) for environment setup.
 
 ### Step 1: Preprocess Data  
-Download data from [here](). Use `./examples/data_preprocess/if_prompts.py` to preprocess VerInstruct.  
+Download data from [here](#data). Use `./examples/data_preprocess/if_prompts.py` to preprocess VerInstruct.  
 > Make sure to add the import path for `./verl/utils/reward_score/local_server` at the top of each function.
 
 ### Step 2: Setup the Verifier Model  
 For **soft constraint verification**, use an LLM-based verifier. You may:
-- Use our own trained [verifier]() based on R1-Distilled-Qwen-7B
+- Use our own trained [verifier](#verifier) based on R1-Distilled-Qwen-7B
 - Use **QwQ-32B** as the verifier
 
 We suggest using **SGLang** or **vLLM** for deployment.  

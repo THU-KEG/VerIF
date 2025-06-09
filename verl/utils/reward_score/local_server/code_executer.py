@@ -19,7 +19,6 @@ def execute_code(instruction, response, function=None):
     local_vars = {"response": response}
     
     try:
-        exec("import sys\nsys.path.append('/mnt/ph/ScaleIF/verl/verl/utils/reward_score/local_server')", global_context)
         import_statements = extract_imports(function)
         for statement in import_statements:
             exec(statement, global_context)

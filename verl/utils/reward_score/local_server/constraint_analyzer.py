@@ -1,28 +1,17 @@
-import re
-import importlib
-import multiprocessing
-import importlib
-import inspect
-import logging
 import concurrent.futures
-import threading
-import requests
-
-import sys
-sys.path.append('/mnt/ph/ScaleIF/verl/verl/utils/reward_score/local_server')
 
 from code_executer import execute_code
 from llm_call import llm_score
 
 
-# def mean_func(numbers):
-#     mean_num = sum(numbers) / len(numbers)
-#     return mean_num
-
 def mean_func(numbers):
-    if 0 in numbers:
-        return 0
-    return 1
+    mean_num = sum(numbers) / len(numbers)
+    return mean_num
+
+# def all_func(numbers):
+#     if 0 in numbers:
+#         return 0
+#     return 1
 
 
 def _evaluate_reward(instruction, response, functions, reduction="mean"):

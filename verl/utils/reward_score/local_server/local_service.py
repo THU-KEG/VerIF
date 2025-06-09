@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/mnt/ph/ScaleIF/verl/verl/utils/reward_score/local_server')
 from constraint_analyzer import evaluate_if_reward_multi
 import json
 

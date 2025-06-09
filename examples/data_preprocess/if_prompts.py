@@ -17,8 +17,8 @@ def load_dataset(data_paths):
         with open(data_path) as f:
             for line in tqdm(f.readlines()):
                 item = json.loads(line.strip())
-                # functions = ["import sys\nsys.path.append('/mnt/ph/ScaleIF/verl/verl/utils/reward_score/local_server')\n"+function.replace("local_server", "llm_call") for function in item["functions"]]
-                functions = ["import sys\nsys.path.append('/mnt/ph/ScaleIF/verl/verl/utils/reward_score/local_server')\n"+function for function in item["functions"]]
+                functions = ["import sys\nsys.path.append(<path here>)\n"+function for function in item["functions"]]
+                assert 0,  "Please add the path `verl/utils/reward_score/local_server` into the Python PATH."
 
                 data.append({
                     "id": item["id"],

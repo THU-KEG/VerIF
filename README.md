@@ -17,7 +17,7 @@
     <img src="https://img.shields.io/badge/Model-Verifier-blue" alt="Verifier">
   </a>
   <a href="https://arxiv.org/abs/2506.09942">
-    <img src="https://img.shields.io/badge/paper-arxiv-pink" 
+    <img src="https://img.shields.io/badge/Paper-arxiv-pink" 
     alt="Paper">
   </a>
 

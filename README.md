@@ -16,14 +16,19 @@
   <a href="https://huggingface.co/THU-KEG/IF-Verifier-7B">
     <img src="https://img.shields.io/badge/Model-Verifier-blue" alt="Verifier">
   </a>
+  <a href="https://arxiv.org/abs/2506.09942">
+    <img src="https://img.shields.io/badge/paper-arxiv-pink" 
+    alt="Paper">
+  </a>
 
 </div>
+
 
 ---
 
 ## Introduction
 
-**VerIF** is a practical and efficient method for **verification in instruction-following reinforcement learning**. Built on the idea of *Reinforcement Learning with Verifiable Rewards (RLVR)*, VerIF integrates **rule-based code checks** with **LLM-based reasoning verification** (e.g., QwQ-32B) to provide accurate and scalable reward signals.
+[**VerIF**](https://arxiv.org/abs/2506.09942) is a practical and efficient method for **verification in instruction-following reinforcement learning**. Built on the idea of *Reinforcement Learning with Verifiable Rewards (RLVR)*, VerIF integrates **rule-based code checks** with **LLM-based reasoning verification** (e.g., QwQ-32B) to provide accurate and scalable reward signals.
 
 To support this method, we construct a high-quality dataset, **VerInstruct**, with ~22,000 instruction-following instances paired with verification signals. Models trained with VerIF not only achieve **state-of-the-art performance** on several benchmarks across models at similar scale but also maintain their general capabilities.
 
@@ -98,4 +103,13 @@ We thank the [**verl**](https://github.com/volcengine/verl) team for their open-
 ## Citations
 If this repo helps, please kindly cite us:
 ```
+@misc{peng2025verif,
+      title={VerIF: Verification Engineering for Reinforcement Learning in Instruction Following}, 
+      author={Hao Peng and Yunjia Qi and Xiaozhi Wang and Bin Xu and Lei Hou and Juanzi Li},
+      year={2025},
+      eprint={2506.09942},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.09942}, 
+}
 ```
